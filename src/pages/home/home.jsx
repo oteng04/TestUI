@@ -40,7 +40,7 @@ export default function Home() {
     <MDBContainer fluid className="py-5" style={{ backgroundColor: "#eee" }}>
       <MDBRow className="d-flex justify-content-center">
         <MDBCol md="8" lg="6" xl="4">
-          <MDBCard>
+          <MDBCard style={{height: "90vh"}}>
           <MDBCardHeader
               className="d-flex justify-content-between align-items-center p-3"
               style={{ borderTop: "4px solid #7f00ff", marginBottom: "-30px" }}

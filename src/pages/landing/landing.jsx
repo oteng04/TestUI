@@ -23,7 +23,7 @@ function Landing() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      navigate('/home', {state:{name:name}});
+      navigate('/chat', {state:{name:name}});
     
     }
   
@@ -39,7 +39,7 @@ function Landing() {
               <h2 className="fw-bold mb-2 text-center">Chat App</h2>
 
               <form className='align-items-center text-center'  onSubmit={handleSubmit}>
-              <MDBInput color='secondary' wrapperClass='mb-4 w-100' label='Enter name' id='formControlLg' name='name' size="lg" onChange={(e) => setName(e.target.value)} value={name} type='text' required/>
+              <MDBInput color='secondary' wrapperClass='mb-4 w-100' label='Enter Username' id='formControlLg' name='name' size="lg" onChange={(e) => setName(e.target.value)} value={name} type='text' required/>
 
               <MDBBtn className='align-items-center' size='lg' color='secondary' type="submit">
                 Start
