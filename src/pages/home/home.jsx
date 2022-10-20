@@ -1,4 +1,5 @@
 import React from "react";
+import {  useNavigate} from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import logo from '../../assets/user_icon.png';
 import {
@@ -20,7 +21,21 @@ import {
 } from "mdb-react-ui-kit";
 
 export default function Home() {
+    const navigate = useNavigate();
+
+   
+   
+    // const handleSubmit = () => {
+       
+    //   navigate('/chat', {state:{name:'event'}});
+    
+    // }
+
+    function handleSubmit(name) {
+        navigate('/chat', {state:{name:name}});
+      }
     const location = useLocation();
+    const name  = location.state.name
   return (
     <MDBContainer fluid className="py-5" style={{ backgroundColor: "#eee" }}>
       <MDBRow className="d-flex justify-content-center">
@@ -30,7 +45,7 @@ export default function Home() {
               className="d-flex justify-content-between align-items-center p-3"
               style={{ borderTop: "4px solid #7f00ff", marginBottom: "-30px" }}
             >
-              <h5 className="mb-0">{location.state.name}</h5>
+              <h5 className="mb-0">{name}</h5>
                
             </MDBCardHeader>
              
@@ -42,7 +57,8 @@ export default function Home() {
                 <MDBTypography listUnStyled className="mb-0">
                   <li className="p-2 border-bottom">
                     <a
-                      href="#!"
+                      href=""
+                      onClick={() => handleSubmit('James')}
                       className="d-flex justify-content-between"
                     >
                       <div className="d-flex flex-row">

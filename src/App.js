@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from "./pages/landing/landing";
 import Home from "./pages/home/home";
+import Chat from "./pages/chat/chat";
 import React from 'react';
  
 
@@ -17,6 +18,10 @@ function App() {
 
            <Route path="/home">
              <Route index element={<Home />} />
+           </Route>
+
+           <Route path="/chat">
+             <Route index element={<Chat />} />
            </Route>
         </Routes>
       </BrowserRouter>
