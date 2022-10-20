@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from "./pages/landing/landing";
+import Home from "./pages/home/home";
 import React from 'react';
-// import { Lines } from 'react-preloaders';
+ 
 
  
 
@@ -12,6 +13,10 @@ function App() {
            <Routes>
           <Route path="/">
              <Route index element={<Landing />} />
+           </Route>
+
+           <Route path="/home">
+             <Route index element={<Home />} />
            </Route>
         </Routes>
       </BrowserRouter>
